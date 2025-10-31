@@ -1,0 +1,7 @@
+{
+  "name": "Nigerian Uncle Caller",
+  "description": "An interactive web application that allows users to have a humorous, real-time voice conversation with a virtual funny Nigerian uncle, powered by Gemini's Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
