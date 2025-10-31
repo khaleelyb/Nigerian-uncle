@@ -6,7 +6,7 @@ import { createBlob, decode, decodeAudioData } from './utils/audio';
 import { PhoneIcon, HangUpIcon, MicIcon } from './components/Icons';
 
 const App: React.FC = () => {
-    const [callState, setCallState] = useState<CallState>('idle');
+    const [callState, setCallState] = useState<CallState>('ringing');
     const [transcriptionHistory, setTranscriptionHistory] = useState<TranscriptionTurn[]>([]);
     const [callDuration, setCallDuration] = useState(0);
 
@@ -187,7 +187,7 @@ const App: React.FC = () => {
         } catch (error) {
             console.error("Failed to start call:", error);
             alert("Could not start the call. Please ensure you have given microphone permissions.");
-            setCallState('idle');
+            setCallState('ended');
         }
     };
     
