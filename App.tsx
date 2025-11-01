@@ -93,7 +93,7 @@ const App: React.FC = () => {
         currentOutputTranscriptionRef.current = '';
 
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+            const ai = new GoogleGenAI({ apiKey: 'AIzaSyDgplPg5QiQ4fhxdz9pnbJv__PwenSNohQ' });
             
             audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 });
             outputAudioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 24000 });
